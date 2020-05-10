@@ -24,22 +24,21 @@ function renderCard(card) {
   div.style.margin = "1rem";
   div.className = "card";
   div.innerHTML = `
-        <img src="${card.photo}" class="card-img-top" alt="${card.name}" />
-        <div class="card-body">
-            <h5 class="card-title">${card.name}</h5>
-            <p class="card-text">
-                Tipo: ${card.property_type}
-            </p>
-            <p class="card-text">
-                Preço: ${currencyFormatter.format(card.price)}
-            </p>
-        </div>
-    `;
+            <img src="${card.photo}" class="card-img-top" alt="${card.name}" />
+            <div class="card-body">
+                <h5 class="card-title">${card.name}</h5>
+                <p class="card-text">
+                    Tipo: ${card.property_type}
+                </p>
+                <p class="card-text">
+                    Preço: ${currencyFormatter.format(card.price)}
+                </p>
+            </div>
+        `;
   cardsContainer.appendChild(div);
 }
 
 function filterData(filter) {
-  
   if (filter === "Todos") {
     renderCards(data);
   } else {
