@@ -31,7 +31,7 @@ function renderCard(card) {
                 Tipo: ${card.property_type}
             </p>
             <p class="card-text">
-                Preço: R$ ${currencyFormatter.format(card.price)}
+                Preço: ${currencyFormatter.format(card.price)}
             </p>
         </div>
     `;
