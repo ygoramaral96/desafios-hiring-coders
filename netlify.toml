@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "https://covid-19-news-page.netlify.app/"
+  to = "https://covid-19-news-page.netlify.app/covid-19-news-page/"
+  status = 301
+  force = false
