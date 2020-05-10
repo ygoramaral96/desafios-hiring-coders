@@ -16,7 +16,7 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <!-- Custom styles for this template -->
-    <link href="src/css/navbar-top-fixed.css" rel="stylesheet">
+    <link href="src/css/custom.css" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
 </head>
 
@@ -58,17 +58,31 @@
     </nav>
 
     <main role="main" class="container">
-    
-        <h1>Hello World</h1>
-    
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <label class="input-group-text" for="inputGroupSelect01">Filtrar</label>
+            </div>
+            <select class="custom-select" id="inputGroupSelect01" onchange="filterData(this.value)">
+                <option value ="Todos" selected>Todos</option>
+                <option value="Apartamento">Apartamento</option>
+                <option value="Casa">Casa</option>
+                <option value="Chácara">Chácara</option>
+                <option value="Estúdio">Loft</option>
+                <option value="Quarto">Quarto</option>
+                <option value="Sítio">Sítio</option>
+            </select>
+        </div>
+
+        <div class="d-inline-flex flex-wrap align-content-stretch" id="cards"></div>
     </main>
 
 
     <hr>
     <footer class="container">
-        <div class="row">
+        <div class="text-center">
+            © 2020 Ygor Amaral | 
             <a href="https://gama.academy/" target="__blank">
-                <img src="src/images/gama-academy.png" alt="Gama Academy" style="max-height: 100px;">
+                <img src="src/images/gama-academy.png" alt="Gama Academy" style="max-height: 70px;">
             </a>
             <a href="https://www.github.com/ygoramaral96" class="pt-4" target="__blank">
                 <img src="src/images/github.png" style="max-height: 100px;">
@@ -83,6 +97,7 @@
     </footer>
     
     <!-- Optional JavaScript -->
+    <script src="src/js/index.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
